@@ -9,7 +9,7 @@ type MyContextProps = {
 export const MyContext = createContext<MyContextProps | undefined>(undefined);
 
 const getFromLocalStorage = () => {
-    const CheckOut = typeof window !== undefined && window.localStorage.getItem('theme') || 'light';
+    const CheckOut = typeof window !== 'undefined' && window.localStorage.getItem('theme') || 'light';
     return CheckOut;
 };
 
