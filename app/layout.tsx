@@ -9,7 +9,7 @@ import { MyContextProvider } from "@/context/ThemeContext";
 const merriweather_Sans = Merriweather_Sans({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Portfolio ni {var}",
+  title: "Portfolio ni Rojan",
   description: "Showcasing my skills and progress.",
 };
 
