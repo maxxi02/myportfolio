@@ -16,6 +16,7 @@ const config: Config = {
       },
       colors: {
         darkModeText: '#ffffff', 
+        softDarkModeText: 'rgb(203 213 225)', 
         whiteModeText: '#333333',
         whiteModeBg: '#ffffff',
         darkModeBg: '#1a1a1a',

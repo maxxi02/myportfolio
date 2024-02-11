@@ -1,5 +1,7 @@
 import HeroToggle from "@/components/HeroToggle"
+import PortfolioItem from "@/components/PortfolioItem"
 import SectionHeading from "@/components/SectionHeading"
+import { benefits, portfolios, skills } from "@/constants"
 import { ArrowRight, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -7,6 +9,7 @@ import Link from "next/link"
 function MainPage() {
   return (
     <>
+      {/* hero section */}
       <section className="flex items-center max-width flex-col-reverse tablet:flex-row my-10">
         {/* left side */}
         <div className="tablet:w-2/3 mt-10 tablet:mt-0">
@@ -42,7 +45,55 @@ function MainPage() {
           title={"Creative Skills"}
           subtitle={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptas tempora quaerat, ipsum, eaque sapiente vel ut est quasi perspiciatis iusto nulla enim veniam necessitatibus deleniti quibusdam obcaecati quod sint!"}
         />
-
+        {/* skills */}
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
+          {skills.map((skill, i) => (
+            <div key={i} className="box dark:bg-transparent dark:drop-shadow-xl shadow shadow-white flex flex-col items-center gap-5">
+              <div className="w-16 h-16 rounded drop-shadow-md dark:shadow dark:shadow-white shadow-black flex items-center justify-center flex-shrink-0 mb-2">
+                <Image 
+                src={skill.icon} 
+                width={35} 
+                height={35} 
+                alt={skill.name}/>
+              </div>
+              <div className="text-center">
+                <h4 className="text-grey-700 dark:text-darkModeText mb-2">{skill.name}</h4>
+                <p className="text-grey-600 dark:text-softDarkModeText">{skill.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* benifits section */}
+      <section className="max-width section-padding">
+        <SectionHeading title="Benefits" subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptas tempora quaerat, ipsum, eaque sapiente vel ut est quasi perspiciatis iusto nulla enim veniam necessitatibus deleniti quibusdam obcaecati quod sint!"/>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6 mb-4 tablet:mb-6">
+          {benefits.slice(0,2).map((benefit, i)=> (
+            <div key={i} className="box dark:bg-transparent dark:drop-shadow-xl shadow-white shadow text-center">
+              <h5 className="text-grey-700 dark:text-darkModeText mb-2">{benefit.name}</h5>
+              <p className="text-grey-600 dark:text-softDarkModeText">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
+          {benefits.slice(2).map((benefit, i)=> (
+            <div key={i} className="box dark:bg-transparent dark:drop-shadow-xl shadow-white shadow text-center">
+              <h5 className="text-grey-700 dark:text-darkModeText mb-2">{benefit.name}</h5>
+              <p className="text-grey-600 dark:text-softDarkModeText">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="section-padding max-width">
+      <SectionHeading
+          title={"My Projects"}
+          subtitle={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptas tempora quaerat, ipsum, eaque sapiente vel ut est quasi perspiciatis iusto nulla enim veniam necessitatibus deleniti quibusdam obcaecati quod sint!"}
+        />
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] tablet:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3 tablet:gap-6">
+          {portfolios.slice(0,3).map((p, i) => (
+            <PortfolioItem key={i} portfolio={p}/>
+          ))}
+        </div>
       </section>
     </>
 

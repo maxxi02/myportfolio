@@ -17,47 +17,61 @@ export const navLinks = [
 export const skills = [
   {
     id: 1,
-    name: "Front-end Development",
-    description:
-      "Proficiency in coding the visual aspects of websites using HTML, CSS, and JavaScript to ensure a seamless and attractive user interface.",
-    icon: "/icons/service-1.svg",
+    name: "C#",
+    description: "Basic knowledge in C# programming language for developing various applications.",
+    icon: "/icons/c-sharp.png"
   },
   {
     id: 2,
-    name: "User Interface - UI Development",
-    description:
-      "Ability to craft visually appealing and user-friendly interfaces using code to enhance user engagement and interaction.",
-    icon: "/icons/service-2.svg",
+    name: "Java",
+    description: "Basic knowledge in Java programming language for building enterprise-level applications.",
+    icon: "/icons/java.png",
   },
   {
     id: 3,
-    name: "User Experience - UX Development",
-    description:
-      "Understanding of user behavior and experience principles applied through coding to create seamless and satisfying user interactions.",
-    icon: "/icons/service-3.svg",
+    name: "JavaScript",
+    description: "Basic knowledge in JavaScript for creating dynamic and interactive web applications.",
+    icon: "/icons/js.png"
   },
   {
     id: 4,
-    name: "Responsive Web Development",
-    description:
-      "Capability to develop websites that adapt and function flawlessly across various devices and screen sizes using coding techniques.",
-    icon: "/icons/service-4.svg",
+    name: "React",
+    description: "Experience with React library for building scalable and efficient user interfaces.",
+    icon: "/icons/react.png",
   },
   {
     id: 5,
-    name: "Prototyping and Development Testing",
-    description:
-      "Ability to code prototypes and conduct thorough testing to visualize and refine website functionalities.",
-    icon: "/icons/service-5.svg",
+    name: "HTML",
+    description: "Basic knowledge in HTML for creating the structure of web pages.",
+    icon: "/icons/html.png"
   },
   {
     id: 6,
-    name: "Mobile-Friendly Coding",
-    description:
-      "Proficiency in coding practices that ensure websites function seamlessly on mobile devices.",
-    icon: "/icons/service-6.svg",
+    name: "CSS",
+    description: "Basic knowledge in CSS for styling web pages and creating attractive layouts.",
+    icon: "/icons/css-3.png"
   },
+  {
+    id: 7,
+    name: "Tailwind CSS",
+    description: "Experience with Tailwind CSS framework for rapid UI development.",
+    icon: "/icons/tailwind-css-blue.svg"
+  },
+  {
+    id: 8,
+    name: "Unity Engine",
+    description: "Experience with Unity Engine for developing cross-platform games and applications.",
+    icon: "/icons/unity.png"
+  },
+  {
+    id: 9,
+    name: "Figma",
+    description: "Proficiency in Figma for designing user interfaces and prototypes.",
+    icon: "/icons/figma.png"
+  }
 ];
+
+
 export const benefits = [
   {
     id: 1,
@@ -90,6 +104,7 @@ export const benefits = [
       "With expertise in HTML, CSS, JavaScript, and cutting-edge front-end technologies, I possess the technical prowess to execute your design concepts. From seamless animations to interactive features, I leverage the latest coding technologies to elevate user engagement and deliver a dynamic user experience.",
   },
 ];
+
 export const portfolios = [
   {
     id: 1,
